@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import LoadingSpinner from "./components/Loading/LoadingSpinner";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 // User-facing page layouts (Lazy-loaded)
 const HomeLayout = lazy(() => import("./pages/HomePage/HomeLayout"));
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       {!isAdminRoute && <Navbar />}
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
