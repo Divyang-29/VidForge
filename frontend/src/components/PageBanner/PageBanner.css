@@ -1,0 +1,140 @@
+/* ── Banner wrapper ── */
+.pb-banner {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background: #e8e8e8;
+}
+
+/* ── Left gradient panel ── */
+.pb-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(
+    125deg,
+    #1a3cff 0%,
+    #a0155a 30%,
+    #d9320a 60%,
+    #f5a623 100%
+  );
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%);
+  z-index: 2;
+}
+
+/* ── Text block ── */
+.pb-text {
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 3;
+}
+
+.pb-title {
+  font-size: clamp(22px, 3vw, 38px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.3px;
+  line-height: 1.1;
+}
+
+/* ── Breadcrumb ── */
+.pb-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.pb-crumb {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.pb-crumb-link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.pb-crumb-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.pb-crumb-current {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+}
+
+.pb-crumb-sep {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 6px;
+  font-weight: 300;
+}
+
+/* ── Orange slash bars ── */
+.pb-slash {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.pb-slash-bar {
+  width: 28px;
+  border-radius: 3px;
+  transform: skewX(-18deg);
+}
+
+.pb-slash-bar--1 {
+  height: 54px;
+  background: #f97316;
+}
+
+.pb-slash-bar--2 {
+  height: 42px;
+  background: #f59e0b;
+  margin-left: 6px;
+}
+
+.pb-slash-bar--3 {
+  height: 32px;
+  background: #f97316;
+  margin-left: 2px;
+}
+
+/* ── Right image panel ── */
+.pb-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: #e8e8e8;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pb-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+  object-position: top center;
+  display: block;
+}

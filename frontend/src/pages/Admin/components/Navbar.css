@@ -1,0 +1,20 @@
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 30px;
+
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+
+  color: white;
+}
+
+.logout-btn {
+  background: #ff5c00;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+}

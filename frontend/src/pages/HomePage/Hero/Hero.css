@@ -1,0 +1,118 @@
+.hero{
+  min-height:100vh;
+
+  background:
+  radial-gradient(circle at 40% 20%,#ffb43b 0%,#f46a2f 40%,#1a2454 80%);
+
+  padding-top:120px;
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* wrapper */
+
+.hero-wrapper{
+  position:relative;
+}
+
+/* title */
+
+.hero-text h1{
+  font-size:140px;
+  font-weight:900;
+  line-height:120px;
+  color:#0d0d0d;
+}
+
+.hero-text span{
+  color:#0d0d0d;
+}
+
+/* description */
+
+.hero-desc{
+  position:absolute;
+  right:0;
+  top:40px;
+
+  width:300px;
+  font-size:14px;
+  color:white;
+}
+
+/* star */
+
+.hero-star{
+  position:absolute;
+  right:300px;
+  top:120px;
+  font-size:70px;
+}
+
+/* media */
+
+.hero-media{
+  margin-top:60px;
+  position:relative;
+  margin-left: 80px;
+}
+
+/* video card */
+
+.video-card{
+  width:1060px;
+  background:#f1dcc8;
+  padding:18px;
+  position:relative;
+}
+
+.video-card img{
+  width:100%;
+  display:block;
+}
+
+/* watch */
+
+.watch{
+  position:absolute;
+  top:20px;
+  left:25px;
+
+  color:#ff5c00;
+  font-weight:600;
+}
+
+/* floating image */
+
+.floating-img{
+  position:absolute;
+  right:60px;
+  top:240px;
+  width:210px;
+}
+
+.floating-img img{
+  width:100%;
+}
+
+/* orange square */
+
+.orange-box{
+  position:absolute;
+  left:-40px;
+  bottom:-40px;
+
+  width:120px;
+  height:120px;
+
+  background:#ff5c00;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:white;
+  font-size:40px;
+  font-weight:700;
+}

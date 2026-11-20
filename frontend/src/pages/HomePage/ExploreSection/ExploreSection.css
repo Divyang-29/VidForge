@@ -1,0 +1,63 @@
+.explore{
+  background: radial-gradient(circle at right,#1e3a5f,#0a0a0a);
+  padding:120px 0;
+  color:white;
+}
+
+/* text */
+
+.explore-text{
+  font-size:20px;
+  line-height:1.8;
+  color:#cfcfcf;
+  max-width:520px;
+}
+
+/* button */
+
+.explore-btn{
+  display:flex;
+  align-items:center;
+  margin-top:40px;
+}
+
+/* circle */
+
+.circle{
+  width:120px;
+  height:120px;
+
+  border:1px solid #ff5c00;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:16px;
+  color:white;
+}
+
+/* line */
+
+.line{
+  width:80px;
+  height:2px;
+  background:#ff5c00;
+  margin-left:20px;
+}
+
+/* arrow */
+
+.arrow{
+  font-size:26px;
+  margin-left:15px;
+  color:#ff5c00;
+}
+
+/* image */
+
+.explore-image img{
+  width:100%;
+  border-radius:2px;
+}

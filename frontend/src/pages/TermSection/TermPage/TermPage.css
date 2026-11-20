@@ -1,0 +1,90 @@
+/* ── Page ── */
+.tp-page {
+  background: #000;
+  min-height: 100vh;
+  padding: 56px 0 80px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.tp-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Section ── */
+.tp-section {
+  margin-bottom: 48px;
+}
+
+/* ── Heading ── */
+.tp-heading {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 20px;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+/* ── Paragraph ── */
+.tp-para {
+  font-size: 15px;
+  color: #cccccc;
+  line-height: 1.85;
+  margin: 0 0 16px;
+}
+
+.tp-para strong,
+.tp-para b {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ── Ordered List ── */
+.tp-list {
+  padding-left: 0;
+  list-style: none;
+  counter-reset: tp-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 16px 0 0;
+}
+
+.tp-list-item {
+  counter-increment: tp-counter;
+  display: flex;
+  gap: 16px;
+  font-size: 15px;
+  color: #cccccc;
+  line-height: 1.7;
+}
+
+.tp-list-item::before {
+  content: counter(tp-counter) ".";
+  color: #cccccc;
+  font-weight: 500;
+  flex-shrink: 0;
+  min-width: 20px;
+}
+
+/* ── States ── */
+.tp-state {
+  color: #aaa;
+  font-size: 16px;
+  padding: 60px;
+  text-align: center;
+}
+
+.tp-error {
+  color: #f87171;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .tp-inner {
+    padding: 0 24px;
+  }
+}

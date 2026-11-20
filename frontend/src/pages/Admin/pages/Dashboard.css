@@ -1,0 +1,12 @@
+.dashboard {
+  color: white;
+}
+
+.dashboard h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.dashboard p {
+  color: #bdbdbd;
+}

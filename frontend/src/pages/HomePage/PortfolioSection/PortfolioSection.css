@@ -1,0 +1,74 @@
+.portfolio {
+  padding: 120px 0;
+  background: #070707;
+  color: white;
+}
+
+/* heading */
+
+.portfolio-heading h2 {
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 80px;
+}
+
+.light {
+  color: #4a4a4a;
+}
+
+.dot {
+  margin: 0 20px;
+}
+
+/* grid */
+
+.portfolio-grid {
+  display: flex;
+  gap: 40px;
+}
+
+/* cards */
+
+.portfolio-item {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.portfolio-item.large {
+  flex: 1.6;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* overlay */
+
+.watch {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 600;
+}
+
+.play {
+  border: 2px solid white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+}

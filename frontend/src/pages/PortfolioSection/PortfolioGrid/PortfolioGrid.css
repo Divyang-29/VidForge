@@ -1,0 +1,108 @@
+/* ── Page ── */
+.pg-page {
+  background: #000;
+  width: 100%;
+  padding: 0 0 80px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  padding: 40px;
+}
+
+/* ── Two-column grid ── */
+.pg-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 0 32px;
+  padding: 0 24px;
+}
+
+/* ── Columns ── */
+.pg-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Right column offset — staggered lower like the screenshot */
+.pg-col--right {
+  padding-top: 160px;
+}
+
+/* ── Item ── */
+.pg-item {
+  margin-bottom: 56px;
+  cursor: pointer;
+}
+
+.pg-item:hover .pg-img {
+  transform: scale(1.03);
+}
+
+/* ── Image ── */
+.pg-img-wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.pg-item--large .pg-img-wrap {
+  height: 420px;
+}
+
+.pg-item--small .pg-img-wrap {
+  height: 240px;
+}
+
+.pg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+/* ── Info ── */
+.pg-info {
+  padding: 16px 0 0;
+}
+
+.pg-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 5px;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+
+.pg-item:hover .pg-title {
+  color: #f97316;
+}
+
+.pg-category {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+  font-weight: 400;
+}
+
+.pg-category strong,
+.pg-category b {
+  color: #555;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .pg-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .pg-col--right {
+    padding-top: 0;
+  }
+
+  .pg-item--large .pg-img-wrap,
+  .pg-item--small .pg-img-wrap {
+    height: 300px;
+  }
+}

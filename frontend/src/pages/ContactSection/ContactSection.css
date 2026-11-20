@@ -1,0 +1,183 @@
+/* ── Page ── */
+.cs-page {
+  width: 100%;
+  background: #000000;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.cs-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* ── Left ── */
+.cs-left {
+  flex: 0 0 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cs-heading {
+  font-size: clamp(36px, 4.5vw, 62px);
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.cs-desc {
+  font-size: 14px;
+  color: #aaaaaa;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 380px;
+}
+
+/* Info list */
+.cs-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-info-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.cs-info-icon {
+  font-size: 15px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* ── Right ── */
+.cs-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-form-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px;
+  letter-spacing: 0.1px;
+}
+
+/* Row of two inputs */
+.cs-row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Input base */
+.cs-input {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #cccccc;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+.cs-input::placeholder {
+  color: #555555;
+}
+
+.cs-input:focus {
+  border-color: #f97316;
+}
+
+/* Textarea */
+.cs-textarea {
+  resize: none;
+  height: 130px;
+  line-height: 1.6;
+}
+
+/* Feedback messages */
+.cs-feedback {
+  font-size: 13px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cs-success {
+  color: #4ade80;
+}
+
+.cs-error {
+  color: #f87171;
+}
+
+/* Submit button */
+.cs-submit {
+  width: 100%;
+  padding: 16px;
+  background: #f97316;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.cs-submit:hover {
+  background: #ea6c0a;
+}
+
+.cs-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .cs-inner {
+    flex-direction: column;
+    gap: 48px;
+    padding: 0 32px;
+  }
+
+  .cs-left {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .cs-row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,41 @@
+.marquee-section {
+  background: #050505;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+
+  animation: scroll 18s linear infinite;
+}
+
+.marquee span {
+  font-size: 120px;
+  font-weight: 800;
+  white-space: nowrap;
+
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+
+  margin-right: 100px;
+}
+
+/* animation */
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

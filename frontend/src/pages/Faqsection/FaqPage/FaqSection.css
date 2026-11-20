@@ -1,0 +1,136 @@
+/* ── Page ── */
+.faq-page {
+  background: #000;
+  min-height: 60vh;
+  padding: 56px 0 72px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.faq-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Accordion List ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  padding-right: 48px;
+}
+
+/* ── Each Item ── */
+.faq-item {
+  padding: 8px 0;
+}
+
+/* ── Question Button ── */
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: #f97316;
+}
+
+.faq-item--open .faq-question {
+  color: #ffffff;
+}
+
+/* Chevron */
+.faq-chevron {
+  font-size: 14px;
+  color: #888;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.faq-question:hover .faq-chevron {
+  color: #f97316;
+}
+
+/* ── Answer ── */
+.faq-answer {
+  padding: 0 0 20px;
+  animation: fadeDown 0.25s ease;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Divider ── */
+.faq-divider {
+  height: 1px;
+  background: #1a1a1a;
+  width: 100%;
+}
+
+/* ── Right Image ── */
+.faq-img-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+.faq-img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ── States ── */
+.faq-state {
+  color: #aaa;
+  font-size: 16px;
+  padding: 60px;
+  text-align: center;
+}
+
+.faq-error {
+  color: #f87171;
+}
+
+/* ── Animation ── */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .faq-list {
+    padding-right: 0;
+  }
+  .faq-inner {
+    padding: 0 24px;
+  }
+}

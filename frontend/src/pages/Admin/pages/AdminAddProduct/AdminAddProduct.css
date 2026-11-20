@@ -1,0 +1,53 @@
+.admin-product {
+  background: #0f0f0f;
+  color: white;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.admin-product h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.product-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.product-form input,
+.product-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 6px;
+}
+
+.product-form textarea {
+  grid-column: span 2;
+  height: 100px;
+}
+
+.product-form label {
+  grid-column: span 2;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.product-form button {
+  grid-column: span 2;
+  padding: 14px;
+  background: #ff5c00;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-form button:hover {
+  background: #ff7a2a;
+}

@@ -1,0 +1,319 @@
+/* ── Navbar ── */
+.custom-navbar {
+  width: 100%;
+  height: 68px;
+  background: linear-gradient(
+    105deg,
+    #0d1124 0%,
+    #111830 40%,
+    #1c1528 70%,
+    #231720 100%
+  );
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Left Menu ── */
+.nav-left,
+.nav-right {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #c8ccd8;
+  transition: color 0.2s ease;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-item i {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+/* Active underline — Home */
+.nav-item.active {
+  color: #ffffff;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+/* ── Logo ── */
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+/* ── Cart ── */
+.cart-icon {
+  position: relative;
+  font-size: 17px;
+  cursor: pointer;
+  color: #c8ccd8;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon:hover {
+  color: #fff;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #f97316;
+  color: white;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ── Navbar ── */
+.custom-navbar {
+  width: 100%;
+  height: 68px;
+  background: linear-gradient(
+    105deg,
+    #0d1124 0%,
+    #111830 40%,
+    #1c1528 70%,
+    #231720 100%
+  );
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Left Menu ── */
+.nav-left,
+.nav-right {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #c8ccd8;
+  transition: color 0.2s ease;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-item i {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+/* Active underline — Home */
+.nav-item.active {
+  color: #ffffff;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+/* ── Logo ── */
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+/* ── Cart ── */
+.cart-icon {
+  position: relative;
+  font-size: 17px;
+  cursor: pointer;
+  color: #c8ccd8;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon:hover {
+  color: #fff;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #f97316;
+  color: white;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ── Dropdown wrapper ── */
+.nav-dd-wrap {
+  position: relative;
+  list-style: none;
+}
+
+.nav-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #c8ccd8;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.nav-link-btn:hover {
+  color: #fff;
+}
+
+.nav-chevron {
+  font-size: 10px;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.nav-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown menu ── */
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  min-width: 200px;
+  background: #0b1f26;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  z-index: 9999;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.nav-right .nav-dropdown {
+  left: auto;
+  right: 0;
+}
+
+.nav-dropdown-item {
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #d1d5db;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}

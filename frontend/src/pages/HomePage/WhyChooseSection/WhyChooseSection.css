@@ -1,0 +1,62 @@
+.why-section{
+  background:
+  radial-gradient(circle at 60% 60%, #1b3a63, #050505 60%);
+  padding:140px 0;
+  color:white;
+}
+
+/* layout */
+
+.why-wrapper{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* left headline */
+
+.why-left h1{
+  font-size:95px;
+  font-weight:900;
+  line-height:1.1;
+  letter-spacing:1px;
+}
+
+/* right side */
+
+.why-right{
+  width:300px;
+  display:flex;
+  justify-content:center;
+}
+
+/* label */
+
+.why-label{
+  position:relative;
+  color:#cfcfcf;
+  font-size:20px;
+}
+
+/* arrow line */
+
+.why-arrow{
+  position:absolute;
+  left:-120px;
+  top:15px;
+
+  width:90px;
+  height:2px;
+  background:#333;
+}
+
+.why-arrow::before{
+  content:"";
+  position:absolute;
+  left:-8px;
+  top:-4px;
+
+  border-right:8px solid #333;
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+}

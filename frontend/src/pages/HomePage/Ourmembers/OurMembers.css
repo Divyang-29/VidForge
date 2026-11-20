@@ -1,0 +1,153 @@
+/* Page */
+.om-page {
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at 15% 20%,
+    #5a1a0a 0%,
+    #1a0805 30%,
+    #0d0d0d 60%
+  );
+  padding: 56px 64px 72px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.om-header {
+  font-size: clamp(40px, 6vw, 88px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 48px;
+}
+
+.om-header-dim {
+  color: #4b5563;
+}
+
+.om-header-dot {
+  color: #6b7280;
+}
+
+.om-header-bright {
+  color: #d1d5db;
+}
+
+/* Grid */
+.om-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.om-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeUp 0.5s ease both;
+}
+
+.om-img-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 3.5;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.om-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.om-card:hover .om-img {
+  transform: scale(1.04);
+}
+
+/* Info */
+.om-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.om-name {
+  font-size: clamp(18px, 1.8vw, 26px);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.om-position {
+  font-size: 13px;
+  color: #f97316;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* FAB */
+.om-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f97316;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.5);
+  z-index: 100;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* States */
+.om-state {
+  color: #aaa;
+  font-size: 18px;
+  padding: 40px 0;
+}
+
+.om-error {
+  color: #f87171;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .om-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .om-page {
+    padding: 40px 32px 56px;
+  }
+}
+
+@media (max-width: 560px) {
+  .om-grid {
+    grid-template-columns: 1fr;
+  }
+}

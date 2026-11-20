@@ -1,0 +1,32 @@
+.admin-orders {
+  color: white;
+  padding: 30px;
+}
+
+.admin-orders h2 {
+  margin-bottom: 20px;
+}
+
+.admin-orders table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1b1b1b;
+}
+
+.admin-orders th {
+  background: #111;
+  padding: 12px;
+  text-align: left;
+}
+
+.admin-orders td {
+  padding: 12px;
+  border-top: 1px solid #333;
+}
+
+.status {
+  background: #28a745;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}

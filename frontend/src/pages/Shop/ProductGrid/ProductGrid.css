@@ -1,0 +1,147 @@
+/* ── Page ── */
+.pg-page {
+  width: 100%;
+  background: #0a0a0a;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ── Top Bar text ── */
+.pg-count {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+.pg-sort-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pg-sort {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #cccccc;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  padding-right: 20px;
+  outline: none;
+}
+
+.pg-sort option {
+  background: #111;
+  color: #fff;
+}
+
+.pg-sort-arrow {
+  position: absolute;
+  right: 0;
+  font-size: 10px;
+  color: #888;
+  pointer-events: none;
+}
+
+/* ── Card ── */
+.pg-card {
+  cursor: pointer;
+  background: #0a0a0a;
+}
+
+/* ── Image ── */
+.pg-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  background: #1a1a1a;
+}
+
+.pg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pg-card:hover .pg-img {
+  transform: scale(1.05);
+}
+
+/* Hover actions */
+.pg-actions {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  z-index: 10;
+}
+
+.pg-card:hover .pg-actions {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.pg-action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.pg-action-btn:hover {
+  background: #f97316;
+  color: #fff;
+}
+
+/* ── Info ── */
+.pg-info {
+  background: #0a0a0a;
+}
+
+.pg-category {
+  font-size: 12px;
+  color: #888;
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+}
+
+.pg-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.pg-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f97316;
+}
+
+.pg-original {
+  font-size: 13px;
+  color: #555;
+  text-decoration: line-through;
+}

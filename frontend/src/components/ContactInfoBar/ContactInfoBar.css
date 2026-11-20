@@ -1,0 +1,82 @@
+/* ── Outer wrapper (full-width black bg) ── */
+.cib-wrapper {
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  padding: 32px 48px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ── Inner bar ── */
+.cib-bar {
+  width: 100%;
+  max-width: 1000px;
+  background: #0b1f26;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 56px;
+  gap: 24px;
+}
+
+/* ── Each info item ── */
+.cib-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+/* ── Icon ── */
+.cib-icon {
+  font-size: 26px;
+  color: #ffffff;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* ── Text block ── */
+.cib-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cib-label {
+  font-size: 12px;
+  color: #7a9aaa;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.cib-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+/* ── Vertical divider ── */
+.cib-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .cib-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 32px;
+    gap: 28px;
+  }
+
+  .cib-divider {
+    width: 100%;
+    height: 1px;
+  }
+}

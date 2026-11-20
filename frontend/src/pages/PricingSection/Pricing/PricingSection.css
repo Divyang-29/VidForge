@@ -1,0 +1,191 @@
+/* ── Page ── */
+.pc-page {
+  background: #000;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  padding: 0 24px;
+}
+
+/* ── Card ── */
+.pc-card {
+  padding: 36px 32px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid #1e1e1e;
+  background: #0a0a0a;
+  position: relative;
+}
+
+.pc-card--featured {
+  background: #111;
+  border-color: #2a2a2a;
+  z-index: 1;
+}
+
+/* ── Top row: icon + image ── */
+.pc-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 28px;
+  min-height: 100px;
+  position: relative;
+}
+
+.pc-card--featured .pc-top-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pc-box-icon {
+  flex-shrink: 0;
+}
+
+.pc-img-wrap {
+  width: 120px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.pc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Plan Name ── */
+.pc-plan-name {
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 400;
+  margin: 0 0 8px;
+  letter-spacing: 0.2px;
+}
+
+/* ── Price ── */
+.pc-price-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  margin-bottom: 28px;
+  line-height: 1;
+}
+
+.pc-dollar {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  align-self: flex-start;
+  margin-top: 12px;
+}
+
+.pc-amount {
+  font-size: clamp(64px, 7vw, 96px);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+.pc-duration {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
+  margin-left: 4px;
+}
+
+/* ── Features ── */
+.pc-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pc-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: #ddd;
+  padding: 16px 0;
+  border-bottom: 1px solid #1e1e1e;
+  font-weight: 400;
+}
+
+.pc-card--featured .pc-feature-item {
+  border-bottom-color: #2a2a2a;
+}
+
+.pc-check {
+  font-size: 13px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* ── Button ── */
+.pc-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    opacity 0.2s;
+  letter-spacing: 0.2px;
+}
+
+.pc-btn--active {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #333;
+  font-weight: 800;
+}
+
+.pc-btn--active:hover {
+  background: #f97316;
+  border-color: #f97316;
+  color: #000;
+}
+
+.pc-btn--muted {
+  background: transparent;
+  color: #444;
+  border: 1px solid #1e1e1e;
+  font-weight: 500;
+}
+
+.pc-btn--muted:hover {
+  color: #fff;
+  border-color: #444;
+}
+
+/* ── States ── */
+.pc-state {
+  color: #aaa;
+  font-size: 16px;
+  padding: 60px;
+  text-align: center;
+}
+
+.pc-error {
+  color: #f87171;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .pc-card {
+    padding: 28px 24px 32px;
+  }
+}

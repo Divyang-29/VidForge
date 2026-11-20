@@ -1,0 +1,63 @@
+.admin-terms {
+  background: #0f0f0f;
+  color: white;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.admin-terms h2 {
+  margin-bottom: 25px;
+}
+
+.terms-form {
+  display: grid;
+  gap: 15px;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.terms-form input,
+.terms-form textarea {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  padding: 12px;
+  color: white;
+  border-radius: 6px;
+}
+
+.terms-form textarea {
+  height: 120px;
+}
+
+.terms-form button {
+  background: #ff5c00;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.terms-form button:hover {
+  background: #ff7a2a;
+}
+
+.terms-list {
+  display: grid;
+  gap: 20px;
+}
+
+.term-card {
+  background: #1b1b1b;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.term-card h4 {
+  margin-bottom: 10px;
+}
+
+.term-card p {
+  color: #bbb;
+}

@@ -1,0 +1,200 @@
+/* ── Page ── */
+.lp-page {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  padding: 48px 16px;
+}
+
+/* ── Card ── */
+.lp-card {
+  width: 100%;
+  max-width: 760px;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  padding: 52px 52px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Heading ── */
+.lp-heading {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+/* ── Field ── */
+.lp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lp-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.1px;
+}
+
+.lp-input {
+  width: 100%;
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  border-radius: 0;
+}
+
+.lp-input:focus {
+  border-color: #f97316;
+}
+
+/* ── Remember + Forgot row ── */
+.lp-row-mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lp-remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #ccc;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.lp-remember input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #f97316;
+  cursor: pointer;
+  border: 1px solid #444;
+  background: transparent;
+}
+
+.lp-forgot {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lp-forgot:hover {
+  color: #fff;
+}
+
+/* ── Error ── */
+.lp-error {
+  font-size: 13px;
+  color: #f87171;
+  margin: 0;
+}
+
+/* ── Login Button ── */
+.lp-btn-login {
+  width: 100%;
+  padding: 16px;
+  background: #f97316;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s,
+    opacity 0.2s;
+  border-radius: 0;
+}
+
+.lp-btn-login:hover {
+  background: #ea6c0a;
+}
+
+.lp-btn-login:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Sign Up ── */
+.lp-signup-row {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  margin: 0;
+}
+
+.lp-signup-link {
+  color: #888;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.lp-signup-link:hover {
+  color: #fff;
+}
+
+/* ── Social ── */
+.lp-social-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lp-social-label {
+  font-size: 13px;
+  color: #888;
+  white-space: nowrap;
+}
+
+.lp-social-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.lp-social-btn {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #2a2a2a;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  border-radius: 0;
+}
+
+.lp-social-btn:hover {
+  border-color: #f97316;
+  background: #1a1a1a;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .lp-card {
+    padding: 32px 24px;
+  }
+}

@@ -1,0 +1,281 @@
+/* ── Page ── */
+.cart-page {
+  background: #000;
+  min-height: 100vh;
+  padding: 48px 0 80px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.cart-state {
+  padding: 60px;
+  text-align: center;
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* ── Table ── */
+.cart-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cart-thead th {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  padding: 12px 12px 16px;
+  border-bottom: 1px solid #222;
+}
+
+.cart-thead th:first-child {
+  width: 40px;
+}
+
+/* Row */
+.cart-row {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.cart-row td {
+  padding: 20px 12px;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Delete icon */
+.cart-delete {
+  color: #555;
+  cursor: pointer;
+  font-size: 16px;
+  width: 40px;
+  transition: color 0.2s;
+}
+
+.cart-delete:hover {
+  color: #f87171;
+}
+
+/* Product cell */
+.cart-product {
+  display: flex !important;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.cart-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Price */
+.cart-price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Quantity */
+.cart-qty-cell {
+  width: 140px;
+}
+
+.cart-qty {
+  display: flex;
+  align-items: center;
+  border: 1px solid #333;
+  width: fit-content;
+  padding: 4px 12px;
+  gap: 16px;
+}
+
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.qty-btn:hover {
+  color: #f97316;
+}
+
+.qty-val {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Total cell */
+.cart-total-cell {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ── Actions row ── */
+.coupon-input {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 16px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+
+.coupon-input::placeholder {
+  color: #555;
+}
+
+.coupon-input:focus {
+  border-color: #f97316;
+}
+
+.btn-apply {
+  background: #f97316;
+  color: #000;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-apply:hover {
+  background: #ea6c0a;
+}
+
+.btn-update {
+  background: transparent;
+  border: 1px solid #333;
+  color: #555;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.btn-update:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ── Cart Total Section ── */
+.cart-total-section {
+  max-width: 520px;
+}
+
+.cart-total-heading {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 0;
+}
+
+.summary-label {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.summary-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.summary-divider {
+  height: 1px;
+  background: #1a1a1a;
+  width: 100%;
+}
+
+/* Shipping options */
+.summary-shipping {
+  align-items: flex-start;
+}
+
+.shipping-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shipping-opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #ccc;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.shipping-opt input[type="radio"] {
+  accent-color: #f97316;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Checkout button */
+.btn-checkout {
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #555;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.btn-checkout:hover {
+  background: #f97316;
+  border-color: #f97316;
+  color: #000;
+}

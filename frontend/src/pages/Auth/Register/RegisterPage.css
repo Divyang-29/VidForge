@@ -1,0 +1,194 @@
+/* ── Page ── */
+.rp-page {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  padding: 48px 16px;
+}
+
+/* ── Card ── */
+.rp-card {
+  width: 100%;
+  max-width: 760px;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  padding: 52px 52px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Heading ── */
+.rp-heading {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 6px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+/* ── Field ── */
+.rp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rp-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.1px;
+}
+
+.rp-input {
+  width: 100%;
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  padding: 14px 16px;
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.2s ease;
+}
+
+.rp-input:focus {
+  border-color: #f97316;
+}
+
+/* ── Terms ── */
+.rp-terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #ccc;
+  cursor: pointer;
+  font-weight: 400;
+  margin: 2px 0;
+}
+
+.rp-terms input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #f97316;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.rp-terms-link {
+  color: #888;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rp-terms-link:hover {
+  color: #f97316;
+}
+
+/* ── Error ── */
+.rp-error {
+  font-size: 13px;
+  color: #f87171;
+  margin: 0;
+}
+
+/* ── Submit Button ── */
+.rp-btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: #f97316;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  border-radius: 0;
+  transition:
+    background 0.2s,
+    opacity 0.2s;
+}
+
+.rp-btn-submit:hover {
+  background: #ea6c0a;
+}
+
+.rp-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Login row ── */
+.rp-login-row {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  margin: 0;
+}
+
+.rp-login-link {
+  color: #888;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.rp-login-link:hover {
+  color: #fff;
+}
+
+/* ── Social ── */
+.rp-social-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.rp-social-label {
+  font-size: 13px;
+  color: #888;
+  white-space: nowrap;
+}
+
+.rp-social-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.rp-social-btn {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #2a2a2a;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.rp-social-btn:hover {
+  border-color: #f97316;
+  background: #1a1a1a;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .rp-card {
+    padding: 32px 24px;
+  }
+}
