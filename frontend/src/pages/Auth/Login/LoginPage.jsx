@@ -128,7 +128,7 @@ export default function LoginPage() {
           <span className="lp-social-label">Or Sign Up with</span>
           <div className="lp-social-btns">
             <button className="lp-social-btn" title="Google">
-              <img
+              <img loading="lazy" decoding="async"
                 src="https://www.svgrepo.com/show/475656/google-color.svg"
                 alt="Google"
                 width="24"
@@ -136,7 +136,7 @@ export default function LoginPage() {
               />
             </button>
             <button className="lp-social-btn" title="Facebook">
-              <img
+              <img loading="lazy" decoding="async"
                 src="https://www.svgrepo.com/show/475647/facebook-color.svg"
                 alt="Facebook"
                 width="24"

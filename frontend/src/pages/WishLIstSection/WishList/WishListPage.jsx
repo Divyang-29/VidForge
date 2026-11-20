@@ -105,7 +105,7 @@ export default function WishlistPage() {
 
                   {/* Product */}
                   <td className="wl-product">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={getImageUrl(item.primary_image)}
                       alt={item.title}
                       className="wl-img"

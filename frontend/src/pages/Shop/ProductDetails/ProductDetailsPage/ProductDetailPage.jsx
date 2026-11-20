@@ -153,7 +153,7 @@ export default function ProductDetailPage() {
         {/* ── LEFT: Images ── */}
         <div className="pdp-images">
           {activeImage ? (
-            <img
+            <img loading="lazy" decoding="async"
               className="pdp-primary-img"
               src={`${IMAGE_BASE}${activeImage}`}
               alt={product.title}
@@ -170,7 +170,7 @@ export default function ProductDetailPage() {
           {allImages.length > 1 && (
             <div className="pdp-thumbs">
               {allImages.map((img, idx) => (
-                <img
+                <img loading="lazy" decoding="async"
                   key={idx}
                   className={`pdp-thumb ${activeImage === img ? "active" : ""}`}
                   src={`${IMAGE_BASE}${img}`}

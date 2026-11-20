@@ -72,7 +72,7 @@ export default function ServicesPage() {
 
         {/* Image Panel */}
         <div className="image-panel">
-          <img
+          <img loading="lazy" decoding="async"
             key={activeService}
             src={services.find((s) => s.id === activeService)?.image}
             alt="Service preview"

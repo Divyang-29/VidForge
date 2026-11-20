@@ -83,7 +83,7 @@ export default function ClientReviews() {
         {/* Collage */}
         <div className="cr-collage">
           <div className="cr-collage-top">
-            <img
+            <img loading="lazy" decoding="async"
               key={`main-${active}`}
               src={getImageUrl(reviews[collageIndices[0]].image)}
               alt={reviews[collageIndices[0]].name}
@@ -91,7 +91,7 @@ export default function ClientReviews() {
             />
           </div>
           <div className="cr-collage-bottom">
-            <img
+            <img loading="lazy" decoding="async"
               key={`s1-${active}`}
               src={getImageUrl(
                 reviews[
@@ -103,7 +103,7 @@ export default function ClientReviews() {
               alt=""
               className="cr-img cr-img-small fade-in"
             />
-            <img
+            <img loading="lazy" decoding="async"
               key={`s2-${active}`}
               src={getImageUrl(
                 reviews[

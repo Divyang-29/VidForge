@@ -103,7 +103,7 @@ export default function AdminReviews() {
       <div className="review-grid">
         {reviews.map((item) => (
           <div key={item.id} className="review-card">
-            <img src={`${API_URL}/uploads/${item.image}`} alt="" />
+            <img loading="lazy" decoding="async" src={`${API_URL}/uploads/${item.image}`} alt="" />
 
             <p className="review-text">"{item.review}"</p>
 

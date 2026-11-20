@@ -28,7 +28,7 @@ export default function AboutSection() {
 
           {/* Center image */}
           <div className="as-img-wrap">
-            <img
+            <img loading="lazy" decoding="async"
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
               alt="About Us"
               className="as-img"

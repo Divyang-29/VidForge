@@ -43,7 +43,7 @@ export default function  OurMembers() {
         {members.map((member, i) => (
           <div className="om-card" key={member.id} style={{ animationDelay: `${i * 0.1}s` }}>
             <div className="om-img-wrap">
-              <img
+              <img loading="lazy" decoding="async"
                 src={getImageUrl(member.image)}
                 alt={member.name}
                 className="om-img"

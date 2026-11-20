@@ -63,7 +63,7 @@ export default function BlogGrid() {
             <div className="bg-card">
               {/* Image */}
               <div className="bg-img-wrap">
-                <img
+                <img loading="lazy" decoding="async"
                   src={getImageUrl(post.primary_image)}
                   alt={post.title}
                   className="bg-img"

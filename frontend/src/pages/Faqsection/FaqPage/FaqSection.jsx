@@ -78,7 +78,7 @@ export default function FaqSection() {
           {/* ── Right: Image ── */}
           <div className="col-12 col-lg-6 d-none d-lg-block">
             <div className="faq-img-wrap">
-              <img
+              <img loading="lazy" decoding="async"
                 src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=700&q=80"
                 alt="FAQ"
                 className="faq-img"

@@ -151,7 +151,7 @@ export default function CartPage() {
 
                   {/* Product */}
                   <td className="cart-product">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={getImageUrl(item.primary_image)}
                       alt={item.title}
                       className="cart-img"

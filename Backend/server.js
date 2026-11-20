@@ -1,17 +1,30 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const compression = require("compression");
 require("./config/db");
 
 dotenv.config();
-require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+// Performance: Enable gzip compression for all responses
+app.use(compression());
 
-app.use("/uploads", express.static("uploads"));
+app.use(cors());
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ extended: true, limit: "10mb" }));
+
+// Performance: Cache static uploads in client browser for 30 days
+app.use(
+  "/uploads",
+  express.static("uploads", {
+    maxAge: "30d",
+    etag: true,
+    lastModified: true,
+    immutable: true,
+  })
+);
 
 const authRoutes = require("./routes/authRoutes");
 const contactRoutes = require("./routes/contactRoutes");
@@ -46,7 +59,7 @@ app.use("/reviews", reviewRoutes);
 app.use("/faqs", faqRoutes);
 
 app.get("/", (req, res) => {
-  res.send("TalentStack API Running 🚀");
+  res.send("VidForge API Running 🚀");
 });
 
 const PORT = process.env.PORT || 8080;

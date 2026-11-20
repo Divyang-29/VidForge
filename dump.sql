@@ -29,6 +29,17 @@ ALTER TABLE IF EXISTS ONLY public.carts DROP CONSTRAINT IF EXISTS carts_user_id_
 ALTER TABLE IF EXISTS ONLY public.cart_items DROP CONSTRAINT IF EXISTS cart_items_product_id_fkey;
 ALTER TABLE IF EXISTS ONLY public.cart_items DROP CONSTRAINT IF EXISTS cart_items_cart_id_fkey;
 ALTER TABLE IF EXISTS ONLY public.blog_comments DROP CONSTRAINT IF EXISTS blog_comments_blog_id_fkey;
+DROP INDEX IF EXISTS public.idx_wishlist_user_id;
+DROP INDEX IF EXISTS public.idx_wishlist_product_id;
+DROP INDEX IF EXISTS public.idx_products_category;
+DROP INDEX IF EXISTS public.idx_product_reviews_user_id;
+DROP INDEX IF EXISTS public.idx_product_reviews_product_id;
+DROP INDEX IF EXISTS public.idx_orders_user_id;
+DROP INDEX IF EXISTS public.idx_order_items_product_id;
+DROP INDEX IF EXISTS public.idx_order_items_order_id;
+DROP INDEX IF EXISTS public.idx_cart_items_product_id;
+DROP INDEX IF EXISTS public.idx_cart_items_cart_id;
+DROP INDEX IF EXISTS public.idx_blog_comments_blog_id;
 ALTER TABLE IF EXISTS ONLY public.wishlist DROP CONSTRAINT IF EXISTS wishlist_pkey;
 ALTER TABLE IF EXISTS ONLY public.users DROP CONSTRAINT IF EXISTS users_username_key;
 ALTER TABLE IF EXISTS ONLY public.users DROP CONSTRAINT IF EXISTS users_pkey;
@@ -1490,6 +1501,83 @@ ALTER TABLE ONLY public.users
 
 ALTER TABLE ONLY public.wishlist
     ADD CONSTRAINT wishlist_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: idx_blog_comments_blog_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_blog_comments_blog_id ON public.blog_comments USING btree (blog_id);
+
+
+--
+-- Name: idx_cart_items_cart_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_cart_items_cart_id ON public.cart_items USING btree (cart_id);
+
+
+--
+-- Name: idx_cart_items_product_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_cart_items_product_id ON public.cart_items USING btree (product_id);
+
+
+--
+-- Name: idx_order_items_order_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_order_items_order_id ON public.order_items USING btree (order_id);
+
+
+--
+-- Name: idx_order_items_product_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_order_items_product_id ON public.order_items USING btree (product_id);
+
+
+--
+-- Name: idx_orders_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_orders_user_id ON public.orders USING btree (user_id);
+
+
+--
+-- Name: idx_product_reviews_product_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_product_reviews_product_id ON public.product_reviews USING btree (product_id);
+
+
+--
+-- Name: idx_product_reviews_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_product_reviews_user_id ON public.product_reviews USING btree (user_id);
+
+
+--
+-- Name: idx_products_category; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_products_category ON public.products USING btree (category);
+
+
+--
+-- Name: idx_wishlist_product_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_wishlist_product_id ON public.wishlist USING btree (product_id);
+
+
+--
+-- Name: idx_wishlist_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX idx_wishlist_user_id ON public.wishlist USING btree (user_id);
 
 
 --

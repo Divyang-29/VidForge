@@ -42,7 +42,7 @@ export default function PageBanner({
 
       {/* Right image side */}
       <div className="pb-right">
-        <img src={bgImage} alt={title} className="pb-image" />
+        <img loading="lazy" decoding="async" src={bgImage} alt={title} className="pb-image" />
       </div>
     </div>
   );

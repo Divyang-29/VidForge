@@ -173,7 +173,7 @@ export default function BlogDetail() {
                     className="bd-latest-item"
                     onClick={() => navigate(`/blog/${p.id}`)}
                   >
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={getImg(p.primary_image)}
                       alt={p.title}
                       className="bd-latest-img"
@@ -216,7 +216,7 @@ export default function BlogDetail() {
           {/* ── MAIN CONTENT ── */}
           <div className="col-12 col-lg-9">
             {/* Hero Image */}
-            <img
+            <img loading="lazy" decoding="async"
               src={getImg(blog.big_image || blog.primary_image)}
               alt={blog.title}
               className="bd-hero-img"
@@ -287,14 +287,14 @@ export default function BlogDetail() {
             {(blog.image1 || blog.image2) && (
               <div className="bd-two-imgs">
                 {blog.image1 && (
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={getImg(blog.image1)}
                     alt=""
                     className="bd-two-img"
                   />
                 )}
                 {blog.image2 && (
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={getImg(blog.image2)}
                     alt=""
                     className="bd-two-img"
@@ -328,7 +328,7 @@ export default function BlogDetail() {
               {comments.map((c, i) => (
                 <div key={i} className="bd-comment-card">
                   <div className="bd-comment-header">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={`https://i.pravatar.cc/48?u=${c.name}`}
                       alt={c.name}
                       className="bd-comment-avatar"
@@ -343,7 +343,7 @@ export default function BlogDetail() {
                   {c.replies?.map((r, j) => (
                     <div key={j} className="bd-reply-card">
                       <div className="bd-comment-header">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src={`https://i.pravatar.cc/48?u=${r.name}`}
                           alt={r.name}
                           className="bd-comment-avatar"

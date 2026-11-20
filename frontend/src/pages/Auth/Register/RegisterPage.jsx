@@ -159,7 +159,7 @@ export default function RegisterPage() {
           <span className="rp-social-label">Or login with</span>
           <div className="rp-social-btns">
             <button className="rp-social-btn" title="Google">
-              <img
+              <img loading="lazy" decoding="async"
                 src="https://www.svgrepo.com/show/475656/google-color.svg"
                 alt="Google"
                 width="24"
@@ -167,7 +167,7 @@ export default function RegisterPage() {
               />
             </button>
             <button className="rp-social-btn" title="Facebook">
-              <img
+              <img loading="lazy" decoding="async"
                 src="https://www.svgrepo.com/show/475647/facebook-color.svg"
                 alt="Facebook"
                 width="24"

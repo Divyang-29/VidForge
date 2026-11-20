@@ -28,7 +28,7 @@ export default function ExploreSection() {
 
           <div className="col-lg-6">
             <div className="explore-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="https://torado.envytheme.com/video-production-movie-release/default/assets/img/about/about-img-1.webp"
                 alt="studio"
               />

@@ -1,6 +1,5 @@
 import "./Hero.css";
 
-
 export default function Hero() {
   return (
     <section className="hero">
@@ -27,14 +26,19 @@ export default function Hero() {
 
             <img
               src="https://torado.envytheme.com/video-production-movie-release/default/assets/img/hero/hero-img-1.webp"
-              alt=""
+              alt="Video production hero banner"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 
           <div className="floating-img">
             <img
               src="https://torado.envytheme.com/video-production-movie-release/default/assets/img/hero/hero-img-3.webp"
-              alt=""
+              alt="Video production creative showcase"
+              loading="eager"
+              decoding="async"
             />
           </div>
 

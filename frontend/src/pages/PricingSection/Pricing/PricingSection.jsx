@@ -86,7 +86,7 @@ export default function PricingSection() {
                 <div
                   className={`pc-img-wrap ${isFeatured(i) ? "pc-img-wrap--right" : ""}`}
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={getImg(plan.image)}
                     alt={plan.plan_name}
                     className="pc-img"

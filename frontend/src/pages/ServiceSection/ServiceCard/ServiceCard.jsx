@@ -48,7 +48,7 @@ export default function ServiceCards() {
               <div className="sv-top-row">
                 <div className="sv-icon-wrap">
                   {svc.primary_image?.endsWith(".svg") ? (
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={getImgUrl(svc.primary_image)}
                       alt={svc.title}
                       className="sv-icon-img"

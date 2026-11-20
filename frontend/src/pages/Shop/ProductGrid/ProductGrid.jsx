@@ -109,7 +109,7 @@ export default function ProductGrid() {
             >
               {/* Image */}
               <div className="pg-img-wrap">
-                <img
+                <img loading="lazy" decoding="async"
                   src={getImageUrl(product.primary_image)}
                   alt={product.title}
                   className="pg-img w-100"

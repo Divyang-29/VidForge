@@ -18,7 +18,7 @@ export default function PortfolioSection() {
 
         <div className="portfolio-grid">
           <div className="portfolio-item">
-            <img
+            <img loading="lazy" decoding="async"
               src="https://torado.envytheme.com/video-production-movie-release/default/assets/img/portfolio/portfolio-2.webp"
               alt=""
             />
@@ -30,7 +30,7 @@ export default function PortfolioSection() {
           </div>
 
           <div className="portfolio-item large">
-            <img
+            <img loading="lazy" decoding="async"
               src="https://torado.envytheme.com/video-production-movie-release/default/assets/img/portfolio/portfolio-1.webp"
               alt=""
             />
@@ -42,7 +42,7 @@ export default function PortfolioSection() {
           </div>
 
           <div className="portfolio-item">
-            <img
+            <img loading="lazy" decoding="async"
               src="https://torado.envytheme.com/video-production-movie-release/default/assets/img/portfolio/portfolio-3.webp"
               alt=""
             />

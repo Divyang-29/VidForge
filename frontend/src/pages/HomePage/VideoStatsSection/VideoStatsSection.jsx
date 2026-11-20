@@ -9,7 +9,7 @@ export default function VideoStatsSection() {
 
           <div className="col-lg-6">
             <div className="video-box">
-              <img
+              <img loading="lazy" decoding="async"
                 src="https://i.pinimg.com/736x/23/2c/69/232c696cebb0a9544505f1fcddc3e190.jpg"
                 alt="team"
               />

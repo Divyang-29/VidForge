@@ -66,7 +66,7 @@ function PortfolioItem({ item, large }) {
   return (
     <div className={`pg-item ${large ? "pg-item--large" : "pg-item--small"}`}>
       <div className="pg-img-wrap">
-        <img src={item.image} alt={item.title} className="pg-img" />
+        <img loading="lazy" decoding="async" src={item.image} alt={item.title} className="pg-img" />
       </div>
       <div className="pg-info">
         <h3 className="pg-title">{item.title}</h3>

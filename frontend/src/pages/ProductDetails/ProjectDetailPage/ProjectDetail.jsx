@@ -74,7 +74,7 @@ export default function ProjectDetail() {
 
         {/* Hero image */}
         <div className="pd-hero-wrap">
-          <img src={PROJECT.heroImage} alt="Project" className="pd-hero-img" />
+          <img loading="lazy" decoding="async" src={PROJECT.heroImage} alt="Project" className="pd-hero-img" />
         </div>
 
         {/* After hero text */}
@@ -86,13 +86,13 @@ export default function ProjectDetail() {
 
         {/* Two side-by-side images */}
         <div className="pd-two-imgs">
-          <img src={PROJECT.image1} alt="" className="pd-two-img" />
-          <img src={PROJECT.image2} alt="" className="pd-two-img" />
+          <img loading="lazy" decoding="async" src={PROJECT.image1} alt="" className="pd-two-img" />
+          <img loading="lazy" decoding="async" src={PROJECT.image2} alt="" className="pd-two-img" />
         </div>
 
         {/* Full-width image */}
         <div className="pd-full-img-wrap">
-          <img src={PROJECT.image3} alt="" className="pd-full-img" />
+          <img loading="lazy" decoding="async" src={PROJECT.image3} alt="" className="pd-full-img" />
         </div>
 
         {/* Project Challenge */}

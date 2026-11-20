@@ -81,7 +81,7 @@ export default function AdminMembers() {
       <div className="member-grid">
         {members.map((member) => (
           <div key={member.id} className="member-card">
-            <img src={`${API_URL}/uploads/${member.image}`} alt="" />
+            <img loading="lazy" decoding="async" src={`${API_URL}/uploads/${member.image}`} alt="" />
 
             <h4>{member.name}</h4>
             <p>{member.position}</p>
