@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./WishlistPage.css";
+import "./WishListPage.css";
 import { API_URL } from "../../../config/api";
 
 export default function WishlistPage() {

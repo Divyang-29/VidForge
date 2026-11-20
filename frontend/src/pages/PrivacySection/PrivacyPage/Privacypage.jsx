@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./PrivacyPage.css";
+import "./Privacypage.css";
 import { API_URL } from "../../../config/api";
 
 export default function PrivacyPage() {

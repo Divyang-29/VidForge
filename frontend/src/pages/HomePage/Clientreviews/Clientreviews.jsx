@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./ClientReviews.css";
+import "./Clientreviews.css";
 import { API_URL } from "../../../config/api";
 
 export default function ClientReviews() {
