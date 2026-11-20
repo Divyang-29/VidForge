@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./AdminAddBlog.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminAddBlog() {
   const [form, setForm] = useState({
@@ -44,7 +45,7 @@ export default function AdminAddBlog() {
 
     const token = localStorage.getItem("token");
 
-    await axios.post("http://localhost:8080/blogs", formData, {
+    await axios.post(`${API_URL}/blogs`, formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "multipart/form-data",

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./BlogDetail.css";
+import { API_URL } from "../../../../config/api";
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString("en-GB", {
@@ -43,12 +44,12 @@ export default function BlogDetail() {
   const [postSuccess, setPostSuccess] = useState(false);
   const [search, setSearch] = useState("");
 
-  const getImg = (f) => `http://localhost:8080/uploads/${f}`;
+  const getImg = (f) => `${API_URL}/uploads/${f}`;
 
   useEffect(() => {
     setLoading(true);
     Promise.all([
-      fetch(`http://localhost:8080/blog/${id}`)
+      fetch(`${API_URL}/blog/${id}`)
         .then((r) => {
           if (!r.ok) throw new Error(`Blog fetch failed: ${r.status}`);
           return r.json();
@@ -58,7 +59,7 @@ export default function BlogDetail() {
           if (d.blog) return d;
           return { blog: d, comments: d.comments || [] };
         }),
-      fetch("http://localhost:8080/blog")
+      fetch(`${API_URL}/blog`)
         .then((r) => r.json())
         .catch(() => []),
     ])
@@ -81,7 +82,7 @@ export default function BlogDetail() {
     }
     setPosting(true);
     try {
-      const res = await fetch(`http://localhost:8080/blog/comment`, {
+      const res = await fetch(`${API_URL}/blog/comment`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -95,7 +96,7 @@ export default function BlogDetail() {
       setPostSuccess(true);
       setComment({ name: "", email: "", body: "", save: false });
       // refresh comments
-      fetch(`http://localhost:8080/blog/${id}`)
+      fetch(`${API_URL}/blog/${id}`)
         .then((r) => r.json())
         .then(setData);
     } catch {

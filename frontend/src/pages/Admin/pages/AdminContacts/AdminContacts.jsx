@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminContacts.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminContacts() {
   const [contacts, setContacts] = useState([]);
@@ -8,7 +9,7 @@ export default function AdminContacts() {
   const token = localStorage.getItem("token");
 
   const fetchContacts = async () => {
-    const res = await axios.get("http://localhost:8080/contact/admin", {
+    const res = await axios.get(`${API_URL}/contact/admin`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -22,7 +23,7 @@ export default function AdminContacts() {
   }, []);
 
   const deleteContact = async (id) => {
-    await axios.delete(`http://localhost:8080/contact/${id}`, {
+    await axios.delete(`${API_URL}/contact/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

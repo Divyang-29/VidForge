@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminTerms.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminTerms() {
   const [terms, setTerms] = useState([]);
@@ -10,7 +11,7 @@ export default function AdminTerms() {
   const token = localStorage.getItem("token");
 
   const fetchTerms = async () => {
-    const res = await axios.get("http://localhost:8080/terms");
+    const res = await axios.get(`${API_URL}/terms`);
 
     setTerms(res.data);
   };
@@ -23,7 +24,7 @@ export default function AdminTerms() {
     e.preventDefault();
 
     await axios.post(
-      "http://localhost:8080/terms",
+      `${API_URL}/terms`,
       { title, content },
       {
         headers: {

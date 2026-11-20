@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { API_URL } from "../../config/api";
 
 const NAV_LEFT = [
   {
@@ -109,7 +110,7 @@ export default function Navbar() {
       return;
     }
     try {
-      const res = await fetch("http://localhost:8080/cart", {
+      const res = await fetch(`${API_URL}/cart`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) {

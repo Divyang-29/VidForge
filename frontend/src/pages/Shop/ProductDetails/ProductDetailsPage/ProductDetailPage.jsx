@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ProductDetailPage.css";
+import { API_URL } from "../../../../config/api";
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = API_URL;
 const IMAGE_BASE = `${API_BASE}/uploads/`;
 
 // ── Star renderer ──

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminFAQs.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminFAQs() {
   const [faqs, setFaqs] = useState([]);
@@ -10,7 +11,7 @@ export default function AdminFAQs() {
   const token = localStorage.getItem("token");
 
   const fetchFaqs = async () => {
-    const res = await axios.get("http://localhost:8080/faqs");
+    const res = await axios.get(`${API_URL}/faqs`);
 
     setFaqs(res.data);
   };
@@ -23,7 +24,7 @@ export default function AdminFAQs() {
     e.preventDefault();
 
     await axios.post(
-      "http://localhost:8080/faqs",
+      `${API_URL}/faqs`,
       { question, answer },
       {
         headers: {
@@ -38,7 +39,7 @@ export default function AdminFAQs() {
   };
 
   const deleteFaq = async (id) => {
-    await axios.delete(`http://localhost:8080/faqs/${id}`, {
+    await axios.delete(`${API_URL}/faqs/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

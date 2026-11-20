@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ContactSection.css";
+import { API_URL } from "../../config/api";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ export default function ContactSection() {
   const handleSubmit = async () => {
     setStatus("loading");
     try {
-      const res = await fetch("http://localhost:8080/contact", {
+      const res = await fetch(`${API_URL}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

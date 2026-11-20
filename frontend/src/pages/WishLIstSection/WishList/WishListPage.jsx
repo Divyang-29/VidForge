@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./WishlistPage.css";
+import { API_URL } from "../../../config/api";
 
 export default function WishlistPage() {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ export default function WishlistPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const getImageUrl = (f) => `http://localhost:8080/uploads/${f}`;
+  const getImageUrl = (f) => `${API_URL}/uploads/${f}`;
 
   const authHeaders = () => {
     const token = localStorage.getItem("token");
@@ -25,7 +26,7 @@ export default function WishlistPage() {
       return;
     }
 
-    fetch("http://localhost:8080/wishlist", { headers: authHeaders() })
+    fetch(`${API_URL}/wishlist`, { headers: authHeaders() })
       .then((r) => {
         if (r.status === 401) {
           navigate("/login");
@@ -45,14 +46,14 @@ export default function WishlistPage() {
   }, []);
 
   const removeItem = (id) => {
-    fetch(`http://localhost:8080/wishlist/${id}`, {
+    fetch(`${API_URL}/wishlist/${id}`, {
       method: "DELETE",
       headers: authHeaders(),
     }).then(() => setItems((prev) => prev.filter((i) => i.id !== id)));
   };
 
   const addToCart = (id) => {
-    fetch("http://localhost:8080/cart", {
+    fetch(`${API_URL}/cart`, {
       method: "POST",
       headers: authHeaders(),
       body: JSON.stringify({ product_id: id, quantity: 1 }),

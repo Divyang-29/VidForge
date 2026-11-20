@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminMembers.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminMembers() {
   const [members, setMembers] = useState([]);
@@ -11,7 +12,7 @@ export default function AdminMembers() {
   const token = localStorage.getItem("token");
 
   const fetchMembers = async () => {
-    const res = await axios.get("http://localhost:8080/members");
+    const res = await axios.get(`${API_URL}/members`);
 
     setMembers(res.data);
   };
@@ -29,7 +30,7 @@ export default function AdminMembers() {
     formData.append("position", position);
     formData.append("image", image);
 
-    await axios.post("http://localhost:8080/members", formData, {
+    await axios.post(`${API_URL}/members`, formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "multipart/form-data",
@@ -42,7 +43,7 @@ export default function AdminMembers() {
   };
 
   const deleteMember = async (id) => {
-    await axios.delete(`http://localhost:8080/members/${id}`, {
+    await axios.delete(`${API_URL}/members/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -80,7 +81,7 @@ export default function AdminMembers() {
       <div className="member-grid">
         {members.map((member) => (
           <div key={member.id} className="member-card">
-            <img src={`http://localhost:8080/uploads/${member.image}`} alt="" />
+            <img src={`${API_URL}/uploads/${member.image}`} alt="" />
 
             <h4>{member.name}</h4>
             <p>{member.position}</p>

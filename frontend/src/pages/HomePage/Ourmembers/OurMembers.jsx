@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./OurMembers.css";
+import { API_URL } from "../../../config/api";
 
 export default function  OurMembers() {
   const [members, setMembers] = useState([]);
@@ -7,7 +8,7 @@ export default function  OurMembers() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/members")
+    fetch(`${API_URL}/members`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch members");
         return res.json();
@@ -23,7 +24,7 @@ export default function  OurMembers() {
   }, []);
 
   const getImageUrl = (filename) =>
-    `http://localhost:8080/uploads/${filename}`;
+    `${API_URL}/uploads/${filename}`;
 
   if (loading) return <div className="om-page"><p className="om-state">Loading...</p></div>;
   if (error)   return <div className="om-page"><p className="om-state om-error">Error: {error}</p></div>;

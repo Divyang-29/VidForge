@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminPrivacy.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminPrivacy() {
   const [policies, setPolicies] = useState([]);
@@ -10,7 +11,7 @@ export default function AdminPrivacy() {
   const token = localStorage.getItem("token");
 
   const fetchPolicies = async () => {
-    const res = await axios.get("http://localhost:8080/privacy");
+    const res = await axios.get(`${API_URL}/privacy`);
 
     setPolicies(res.data);
   };
@@ -23,7 +24,7 @@ export default function AdminPrivacy() {
     e.preventDefault();
 
     await axios.post(
-      "http://localhost:8080/privacy",
+      `${API_URL}/privacy`,
       { title, content },
       {
         headers: {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./ProductGrid.css";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../../config/api";
 
 const SORT_OPTIONS = [
   { value: "latest", label: "Sort by latest" },
@@ -39,7 +40,7 @@ export default function ProductGrid() {
   const [sort, setSort] = useState("latest");
 
   useEffect(() => {
-    fetch("http://localhost:8080/products")
+    fetch(`${API_URL}/products`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch products");
         return res.json();
@@ -54,7 +55,7 @@ export default function ProductGrid() {
       });
   }, []);
 
-  const getImageUrl = (filename) => `http://localhost:8080/uploads/${filename}`;
+  const getImageUrl = (filename) => `${API_URL}/uploads/${filename}`;
 
   const sorted = [...products].sort((a, b) => {
     if (sort === "price_asc") return parseFloat(a.price) - parseFloat(b.price);

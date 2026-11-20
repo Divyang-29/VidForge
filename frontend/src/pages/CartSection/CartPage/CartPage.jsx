@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CartPage.css";
+import { API_URL } from "../../../config/api";
 
 export default function CartPage() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function CartPage() {
   const [couponMsg, setCouponMsg] = useState(null);
   const [shipping, setShipping] = useState("free");
 
-  const getImageUrl = (f) => `http://localhost:8080/uploads/${f}`;
+  const getImageUrl = (f) => `${API_URL}/uploads/${f}`;
 
   const authHeaders = () => {
     const token = localStorage.getItem("token");
@@ -28,7 +29,7 @@ export default function CartPage() {
       navigate("/login");
       return;
     }
-    fetch("http://localhost:8080/cart", { headers: authHeaders() })
+    fetch(`${API_URL}/cart`, { headers: authHeaders() })
       .then((r) => {
         if (r.status === 401) {
           navigate("/login");
@@ -75,7 +76,7 @@ export default function CartPage() {
     setCouponMsg(null);
     if (!coupon.trim()) return;
     try {
-      const res = await fetch("http://localhost:8080/cart/apply-coupon", {
+      const res = await fetch(`${API_URL}/cart/apply-coupon`, {
         method: "POST",
         headers: authHeaders(),
         body: JSON.stringify({ code: coupon }),

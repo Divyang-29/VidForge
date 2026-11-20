@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminOrders.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminOrders() {
   const [orders, setOrders] = useState([]);
@@ -9,7 +10,7 @@ export default function AdminOrders() {
     const fetchOrders = async () => {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("http://localhost:8080/order/admin/all", {
+      const res = await axios.get(`${API_URL}/order/admin/all`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

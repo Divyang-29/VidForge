@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./FaqSection.css";
+import { API_URL } from "../../../config/api";
 
 export default function FaqSection() {
   const [faqs, setFaqs] = useState([]);
@@ -8,7 +9,7 @@ export default function FaqSection() {
   const [openId, setOpenId] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/faqs")
+    fetch(`${API_URL}/faqs`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed");
         return r.json();

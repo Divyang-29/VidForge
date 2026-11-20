@@ -86,12 +86,17 @@ psql -U postgres -d vidforge -f dump.sql
    cd frontend
    ```
 
-2. Install dependencies:
+2. Copy `.env.example` to `.env` (configured with `VITE_API_URL=https://vidforge.130-210-12-68.sslip.io`):
+   ```bash
+   cp .env.example .env
+   ```
+
+3. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Start the Vite development server:
+4. Start the Vite development server:
    ```bash
    npm run dev
    ```

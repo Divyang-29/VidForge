@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./BlogGrid.css";
+import { API_URL } from "../../../config/api";
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString("en-GB", {
@@ -18,7 +19,7 @@ export default function BlogGrid() {
   const [hovered, setHovered] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/blog")
+    fetch(`${API_URL}/blog`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed to fetch blogs");
         return r.json();
@@ -33,7 +34,7 @@ export default function BlogGrid() {
       });
   }, []);
 
-  const getImageUrl = (f) => `http://localhost:8080/uploads/${f}`;
+  const getImageUrl = (f) => `${API_URL}/uploads/${f}`;
 
   if (loading)
     return (

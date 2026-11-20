@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./PrivacyPage.css";
+import { API_URL } from "../../../config/api";
 
 export default function PrivacyPage() {
   const [sections, setSections] = useState([]);
@@ -7,7 +8,7 @@ export default function PrivacyPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/privacy")
+    fetch(`${API_URL}/privacy`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed to fetch privacy policy");
         return r.json();

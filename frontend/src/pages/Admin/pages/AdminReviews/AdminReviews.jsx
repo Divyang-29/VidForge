@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminReviews.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminReviews() {
   const [reviews, setReviews] = useState([]);
@@ -14,7 +15,7 @@ export default function AdminReviews() {
   const token = localStorage.getItem("token");
 
   const fetchReviews = async () => {
-    const res = await axios.get("http://localhost:8080/reviews");
+    const res = await axios.get(`${API_URL}/reviews`);
 
     setReviews(res.data);
   };
@@ -34,7 +35,7 @@ export default function AdminReviews() {
     formData.append("rating", rating);
     formData.append("image", image);
 
-    await axios.post("http://localhost:8080/reviews", formData, {
+    await axios.post(`${API_URL}/reviews`, formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "multipart/form-data",
@@ -49,7 +50,7 @@ export default function AdminReviews() {
   };
 
   const deleteReview = async (id) => {
-    await axios.delete(`http://localhost:8080/reviews/${id}`, {
+    await axios.delete(`${API_URL}/reviews/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -102,7 +103,7 @@ export default function AdminReviews() {
       <div className="review-grid">
         {reviews.map((item) => (
           <div key={item.id} className="review-card">
-            <img src={`http://localhost:8080/uploads/${item.image}`} alt="" />
+            <img src={`${API_URL}/uploads/${item.image}`} alt="" />
 
             <p className="review-text">"{item.review}"</p>
 

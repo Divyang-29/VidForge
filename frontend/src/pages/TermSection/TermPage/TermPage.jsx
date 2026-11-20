@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./TermPage.css";
+import { API_URL } from "../../../config/api";
 
 export default function TermsPage() {
   const [sections, setSections] = useState([]);
@@ -7,7 +8,7 @@ export default function TermsPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/terms")
+    fetch(`${API_URL}/terms`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed to fetch terms");
         return r.json();

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./ClientReviews.css";
+import { API_URL } from "../../../config/api";
 
 export default function ClientReviews() {
   const [reviews, setReviews] = useState([]);
@@ -8,7 +9,7 @@ export default function ClientReviews() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/reviews")
+    fetch(`${API_URL}/reviews`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch reviews");
         return res.json();
@@ -27,7 +28,7 @@ export default function ClientReviews() {
     setActive((a) => (a - 1 + reviews.length) % reviews.length);
   const next = () => setActive((a) => (a + 1) % reviews.length);
 
-  const getImageUrl = (filename) => `http://localhost:8080/uploads/${filename}`;
+  const getImageUrl = (filename) => `${API_URL}/uploads/${filename}`;
 
   const renderStars = (rating) =>
     Array.from({ length: 5 }, (_, i) => (

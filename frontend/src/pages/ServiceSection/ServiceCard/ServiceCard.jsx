@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./ServiceCards.css";
+import { API_URL } from "../../../config/api";
 
 export default function ServiceCards() {
   const [services, setServices] = useState([]);
@@ -7,7 +8,7 @@ export default function ServiceCards() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/services")
+    fetch(`${API_URL}/services`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed");
         return r.json();
@@ -22,7 +23,7 @@ export default function ServiceCards() {
       });
   }, []);
 
-  const getImgUrl = (f) => `http://localhost:8080/uploads/${f}`;
+  const getImgUrl = (f) => `${API_URL}/uploads/${f}`;
 
   if (loading)
     return (

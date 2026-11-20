@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./AdminAddService.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminAddService() {
   const [form, setForm] = useState({
@@ -38,7 +39,7 @@ export default function AdminAddService() {
 
     const token = localStorage.getItem("token");
 
-    await axios.post("http://localhost:8080/services", formData, {
+    await axios.post(`${API_URL}/services`, formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "multipart/form-data",

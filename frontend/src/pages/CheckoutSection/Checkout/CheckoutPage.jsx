@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CheckoutPage.css";
+import { API_URL } from "../../../config/api";
 
 const COUNTRIES = [
   "India",
@@ -60,7 +61,7 @@ export default function CheckoutPage() {
       navigate("/login");
       return;
     }
-    fetch("http://localhost:8080/cart", { headers: authHeaders() })
+    fetch(`${API_URL}/cart`, { headers: authHeaders() })
       .then((r) => {
         if (r.status === 401) {
           navigate("/login");
@@ -93,7 +94,7 @@ export default function CheckoutPage() {
     }
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8080/order/checkout", {
+      const res = await fetch(`${API_URL}/order/checkout`, {
         method: "POST",
         headers: authHeaders(),
         body: JSON.stringify({ ...form, payment_method: payment }),

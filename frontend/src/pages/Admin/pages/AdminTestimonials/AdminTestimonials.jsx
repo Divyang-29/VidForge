@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import "./AdminTestimonials.css"
+import { API_URL } from "../../../../config/api";
 
 export default function AdminTestimonials(){
 
@@ -13,7 +14,7 @@ export default function AdminTestimonials(){
 
  const fetchTestimonials = async()=>{
 
-  const res = await axios.get("http://localhost:8080/testimonials")
+  const res = await axios.get(`${API_URL}/testimonials`)
 
   setTestimonials(res.data)
 
@@ -28,7 +29,7 @@ export default function AdminTestimonials(){
   e.preventDefault()
 
   await axios.post(
-   "http://localhost:8080/testimonials",
+   `${API_URL}/testimonials`,
    {
     testimonial,
     writer,
@@ -52,7 +53,7 @@ export default function AdminTestimonials(){
  const deleteTestimonial = async(id)=>{
 
   await axios.delete(
-   `http://localhost:8080/testimonials/${id}`,
+   `${API_URL}/testimonials/${id}`,
    {
     headers:{
      Authorization:`Bearer ${token}`

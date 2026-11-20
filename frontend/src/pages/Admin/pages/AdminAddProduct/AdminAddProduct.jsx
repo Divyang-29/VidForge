@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./AdminAddProduct.css";
+import { API_URL } from "../../../../config/api";
 
 export default function AdminAddProduct() {
   const [form, setForm] = useState({
@@ -39,7 +40,7 @@ export default function AdminAddProduct() {
 
     const token = localStorage.getItem("token");
 
-    await axios.post("http://localhost:8080/products", formData, {
+    await axios.post(`${API_URL}/products`, formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "multipart/form-data",

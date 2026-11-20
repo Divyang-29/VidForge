@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./PricingSection.css";
+import { API_URL } from "../../../config/api";
 
 export default function PricingSection() {
   const [plans, setPlans] = useState([]);
@@ -7,7 +8,7 @@ export default function PricingSection() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/pricing")
+    fetch(`${API_URL}/pricing`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed");
         return r.json();
@@ -27,7 +28,7 @@ export default function PricingSection() {
       });
   }, []);
 
-  const getImg = (f) => `http://localhost:8080/uploads/${f}`;
+  const getImg = (f) => `${API_URL}/uploads/${f}`;
 
   // Middle card (index 1) is featured
   const isFeatured = (i) => i === 1;
