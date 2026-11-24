@@ -28,3 +28,31 @@
 .sidebar-menu a:hover{
  color:white;
 }
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 12px;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 16px;
+    margin: 0;
+  }
+
+  .sidebar-menu li {
+    margin: 0;
+  }
+
+  .sidebar-menu a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}

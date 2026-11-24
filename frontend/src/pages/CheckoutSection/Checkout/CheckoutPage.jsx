@@ -146,7 +146,7 @@ export default function CheckoutPage() {
 
             {/* First + Last */}
             <div className="row g-3 mb-3">
-              <div className="col-6">
+              <div className="col-12 col-sm-6">
                 <label className="cp-label">First name*</label>
                 <input
                   className="cp-input"
@@ -156,7 +156,7 @@ export default function CheckoutPage() {
                   onChange={handleChange}
                 />
               </div>
-              <div className="col-6">
+              <div className="col-12 col-sm-6">
                 <label className="cp-label">Last name*</label>
                 <input
                   className="cp-input"
@@ -203,7 +203,7 @@ export default function CheckoutPage() {
 
             {/* Town + State */}
             <div className="row g-3 mb-3">
-              <div className="col-6">
+              <div className="col-12 col-sm-6">
                 <label className="cp-label">Town/City*</label>
                 <div className="cp-select-wrap">
                   <select
@@ -222,7 +222,7 @@ export default function CheckoutPage() {
                   <i className="fas fa-chevron-down cp-select-arrow"></i>
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-12 col-sm-6">
                 <label className="cp-label">State</label>
                 <div className="cp-select-wrap">
                   <select
@@ -244,7 +244,7 @@ export default function CheckoutPage() {
 
             {/* ZIP + Phone */}
             <div className="row g-3 mb-3">
-              <div className="col-6">
+              <div className="col-12 col-sm-6">
                 <label className="cp-label">ZIP Code</label>
                 <input
                   className="cp-input"
@@ -254,7 +254,7 @@ export default function CheckoutPage() {
                   onChange={handleChange}
                 />
               </div>
-              <div className="col-6">
+              <div className="col-12 col-sm-6">
                 <label className="cp-label">Phone</label>
                 <input
                   className="cp-input"

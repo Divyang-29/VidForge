@@ -78,67 +78,69 @@ export default function WishlistPage() {
   return (
     <div className="wl-page">
       <div className="container-fluid px-4 px-md-5">
-        <table className="wl-table">
-          <thead>
-            <tr className="wl-thead">
-              <th></th>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Add to cart</th>
-              <th className="text-end">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            {items.length === 0 ? (
-              <tr>
-                <td colSpan={5} className="wl-empty">
-                  Your wishlist is empty.
-                </td>
+        <div className="scrollable-table" role="region" aria-label="Wishlist" tabIndex={0}>
+          <table className="wl-table">
+            <thead>
+              <tr className="wl-thead">
+                <th></th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Add to cart</th>
+                <th className="text-end">Total</th>
               </tr>
-            ) : (
-              items.map((item) => (
-                <tr key={item.id} className="wl-row">
-                  {/* Delete */}
-                  <td className="wl-delete" onClick={() => removeItem(item.id)}>
-                    <i className="fas fa-trash-alt"></i>
-                  </td>
-
-                  {/* Product */}
-                  <td className="wl-product">
-                    <img loading="lazy" decoding="async"
-                      src={getImageUrl(item.primary_image)}
-                      alt={item.title}
-                      className="wl-img"
-                    />
-                    <span className="wl-name">{item.title}</span>
-                  </td>
-
-                  {/* Price */}
-                  <td className="wl-price">
-                    $
-                    {parseFloat(item.discounted_price || item.price).toFixed(2)}
-                  </td>
-
-                  {/* Add to Cart */}
-                  <td className="wl-add">
-                    <span
-                      className="wl-add-btn"
-                      onClick={() => addToCart(item.id)}
-                    >
-                      Add To Cart
-                    </span>
-                  </td>
-
-                  {/* Total */}
-                  <td className="wl-total text-end">
-                    $
-                    {parseFloat(item.discounted_price || item.price).toFixed(2)}
+            </thead>
+            <tbody>
+              {items.length === 0 ? (
+                <tr>
+                  <td colSpan={5} className="wl-empty">
+                    Your wishlist is empty.
                   </td>
                 </tr>
-              ))
-            )}
-          </tbody>
-        </table>
+              ) : (
+                items.map((item) => (
+                  <tr key={item.id} className="wl-row">
+                    {/* Delete */}
+                    <td className="wl-delete" onClick={() => removeItem(item.id)}>
+                      <i className="fas fa-trash-alt"></i>
+                    </td>
+
+                    {/* Product */}
+                    <td className="wl-product">
+                      <img loading="lazy" decoding="async"
+                        src={getImageUrl(item.primary_image)}
+                        alt={item.title}
+                        className="wl-img"
+                      />
+                      <span className="wl-name">{item.title}</span>
+                    </td>
+
+                    {/* Price */}
+                    <td className="wl-price">
+                      $
+                      {parseFloat(item.discounted_price || item.price).toFixed(2)}
+                    </td>
+
+                    {/* Add to Cart */}
+                    <td className="wl-add">
+                      <span
+                        className="wl-add-btn"
+                        onClick={() => addToCart(item.id)}
+                      >
+                        Add To Cart
+                      </span>
+                    </td>
+
+                    {/* Total */}
+                    <td className="wl-total text-end">
+                      $
+                      {parseFloat(item.discounted_price || item.price).toFixed(2)}
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

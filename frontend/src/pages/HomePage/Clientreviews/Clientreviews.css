@@ -210,3 +210,35 @@
 .cr-error {
   color: #f87171;
 }
+
+@media (max-width: 767.98px) {
+  .cr-page {
+    padding: 32px 16px;
+  }
+
+  .cr-topbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .cr-body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .cr-collage {
+    width: 100%;
+  }
+
+  .cr-bottom-nav {
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  .cr-nav-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

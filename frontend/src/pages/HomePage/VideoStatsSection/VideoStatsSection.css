@@ -48,7 +48,7 @@
 /* text */
 
 .video-text{
-  font-size:40px;
+  font-size:clamp(24px, 3.5vw, 40px);
   line-height:1.4;
   margin-bottom:50px;
 }
@@ -57,11 +57,12 @@
 
 .stats{
   display:flex;
-  gap:80px;
+  flex-wrap:wrap;
+  gap:clamp(24px, 6vw, 80px);
 }
 
 .stat h2{
-  font-size:80px;
+  font-size:clamp(42px, 7vw, 80px);
   font-weight:900;
 
   background:linear-gradient(45deg,#3fa7ff,#ff9f2e);

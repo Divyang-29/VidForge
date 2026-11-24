@@ -30,7 +30,6 @@ const services = [
 
 export default function ServicesPage() {
   const [activeService, setActiveService] = useState(1);
-  const [hovered, setHovered] = useState(null);
 
   return (
     <div className="page">
@@ -49,21 +48,21 @@ export default function ServicesPage() {
             const isActive = activeService === svc.id;
             return (
               <div key={svc.id}>
-                <div
+                <button
+                  type="button"
                   className="service-row"
+                  aria-pressed={isActive}
                   onClick={() => setActiveService(svc.id)}
-                  onMouseEnter={() => setHovered(svc.id)}
-                  onMouseLeave={() => setHovered(null)}
                 >
                   <span className={`service-label ${isActive ? "active" : ""}`}>
                     {svc.label}
                   </span>
                   {isActive && (
                     <span className="arrow-icon">
-                      <i class="fa-solid fa-square-arrow-up-right"></i>
+                      <i className="fa-solid fa-square-arrow-up-right" aria-hidden="true" />
                     </span>
                   )}
-                </div>
+                </button>
                 {i < services.length - 1 && <div className="divider" />}
               </div>
             );

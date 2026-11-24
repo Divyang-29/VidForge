@@ -1,0 +1,25 @@
+
+
+.scrollable-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.scrollable-table:focus-visible {
+  outline: 2px solid #ffb43b;
+  outline-offset: 2px;
+}
+
+@media (any-pointer: coarse) {
+  input:not([type="checkbox"], [type="radio"]),
+  select,
+  textarea {
+    font-size: max(16px, 1em) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+  }
+}

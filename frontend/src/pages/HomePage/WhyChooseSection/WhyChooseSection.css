@@ -60,3 +60,27 @@
   border-top:5px solid transparent;
   border-bottom:5px solid transparent;
 }
+
+@media (max-width: 991.98px) {
+  .why-section {
+    padding: 72px 0;
+  }
+
+  .why-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .why-left h1 {
+    font-size: clamp(36px, 9vw, 76px);
+  }
+
+  .why-right {
+    width: auto;
+  }
+
+  .why-arrow {
+    display: none;
+  }
+}

@@ -11,7 +11,6 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
     cssCodeSplit: true,
     minify: 'esbuild',
     rollupOptions: {

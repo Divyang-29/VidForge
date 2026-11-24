@@ -114,84 +114,86 @@ export default function CartPage() {
     <div className="cart-page">
       <div className="container-fluid px-4 px-md-5">
         {/* ── Cart Table ── */}
-        <table className="cart-table w-100">
-          <thead>
-            <tr className="cart-thead">
-              <th></th>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th className="text-end">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cart.items.length === 0 ? (
-              <tr>
-                <td
-                  colSpan={5}
-                  style={{
-                    textAlign: "center",
-                    padding: "40px",
-                    color: "#888",
-                  }}
-                >
-                  Your cart is empty.
-                </td>
+        <div className="scrollable-table" role="region" aria-label="Shopping cart" tabIndex={0}>
+          <table className="cart-table w-100">
+            <thead>
+              <tr className="cart-thead">
+                <th></th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th className="text-end">Total</th>
               </tr>
-            ) : (
-              cart.items.map((item) => (
-                <tr key={item.id} className="cart-row">
-                  {/* Delete */}
+            </thead>
+            <tbody>
+              {cart.items.length === 0 ? (
+                <tr>
                   <td
-                    className="cart-delete"
-                    onClick={() => removeItem(item.id)}
+                    colSpan={5}
+                    style={{
+                      textAlign: "center",
+                      padding: "40px",
+                      color: "#888",
+                    }}
                   >
-                    <i className="fas fa-trash-alt"></i>
-                  </td>
-
-                  {/* Product */}
-                  <td className="cart-product">
-                    <img loading="lazy" decoding="async"
-                      src={getImageUrl(item.primary_image)}
-                      alt={item.title}
-                      className="cart-img"
-                    />
-                    <span className="cart-name">{item.title}</span>
-                  </td>
-
-                  {/* Price */}
-                  <td className="cart-price">
-                    ${parseFloat(item.price).toFixed(2)}
-                  </td>
-
-                  {/* Quantity */}
-                  <td className="cart-qty-cell">
-                    <div className="cart-qty">
-                      <button
-                        className="qty-btn"
-                        onClick={() => updateQty(item.id, -1)}
-                      >
-                        <i className="fas fa-minus"></i>
-                      </button>
-                      <span className="qty-val">{item.quantity}</span>
-                      <button
-                        className="qty-btn"
-                        onClick={() => updateQty(item.id, 1)}
-                      >
-                        <i className="fas fa-plus"></i>
-                      </button>
-                    </div>
-                  </td>
-
-                  {/* Total */}
-                  <td className="cart-total-cell text-end">
-                    ${parseFloat(item.total).toFixed(2)}
+                    Your cart is empty.
                   </td>
                 </tr>
-              ))
-            )}
-          </tbody>
-        </table>
+              ) : (
+                cart.items.map((item) => (
+                  <tr key={item.id} className="cart-row">
+                    {/* Delete */}
+                    <td
+                      className="cart-delete"
+                      onClick={() => removeItem(item.id)}
+                    >
+                      <i className="fas fa-trash-alt"></i>
+                    </td>
+
+                    {/* Product */}
+                    <td className="cart-product">
+                      <img loading="lazy" decoding="async"
+                        src={getImageUrl(item.primary_image)}
+                        alt={item.title}
+                        className="cart-img"
+                      />
+                      <span className="cart-name">{item.title}</span>
+                    </td>
+
+                    {/* Price */}
+                    <td className="cart-price">
+                      ${parseFloat(item.price).toFixed(2)}
+                    </td>
+
+                    {/* Quantity */}
+                    <td className="cart-qty-cell">
+                      <div className="cart-qty">
+                        <button
+                          className="qty-btn"
+                          onClick={() => updateQty(item.id, -1)}
+                        >
+                          <i className="fas fa-minus"></i>
+                        </button>
+                        <span className="qty-val">{item.quantity}</span>
+                        <button
+                          className="qty-btn"
+                          onClick={() => updateQty(item.id, 1)}
+                        >
+                          <i className="fas fa-plus"></i>
+                        </button>
+                      </div>
+                    </td>
+
+                    {/* Total */}
+                    <td className="cart-total-cell text-end">
+                      ${parseFloat(item.total).toFixed(2)}
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
 
         {/* ── Coupon + Update ── */}
         <div className="cart-actions d-flex align-items-center justify-content-between mt-4">

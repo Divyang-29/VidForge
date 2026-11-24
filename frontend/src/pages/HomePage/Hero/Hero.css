@@ -1,5 +1,6 @@
 .hero{
   min-height:100vh;
+  min-height:100svh;
 
   background:
   radial-gradient(circle at 40% 20%,#ffb43b 0%,#f46a2f 40%,#1a2454 80%);
@@ -61,7 +62,8 @@
 /* video card */
 
 .video-card{
-  width:1060px;
+  width:100%;
+  max-width:1060px;
   background:#f1dcc8;
   padding:18px;
   position:relative;
@@ -115,4 +117,52 @@
   color:white;
   font-size:40px;
   font-weight:700;
+}
+
+@media (max-width: 1199.98px) {
+  .hero-text h1 {
+    font-size: clamp(38px, 11.5vw, 112px);
+    line-height: 0.95;
+  }
+
+  .floating-img {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: 22%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: auto;
+    padding-top: clamp(48px, 10vw, 96px);
+  }
+
+  .hero-desc {
+    position: static;
+    width: auto;
+    max-width: 38ch;
+    margin-top: 24px;
+  }
+
+  .hero-star {
+    display: none;
+  }
+
+  .hero-media {
+    margin: 32px 0 0;
+  }
+
+  .video-card {
+    padding: clamp(8px, 2vw, 18px);
+  }
+
+  .orange-box {
+    left: 0;
+    bottom: -16px;
+    width: clamp(44px, 12vw, 88px);
+    height: clamp(44px, 12vw, 88px);
+    font-size: clamp(20px, 5vw, 36px);
+  }
 }

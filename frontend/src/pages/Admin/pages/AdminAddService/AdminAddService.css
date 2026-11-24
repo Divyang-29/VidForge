@@ -49,3 +49,14 @@
 .service-form button:hover {
   background: #ff7a2a;
 }
+
+@media (max-width: 767.98px) {
+  .service-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-form > * {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+}

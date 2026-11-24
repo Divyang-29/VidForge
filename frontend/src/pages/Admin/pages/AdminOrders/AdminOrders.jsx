@@ -26,40 +26,42 @@ export default function AdminOrders() {
     <div className="admin-orders">
       <h2>Orders</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Payment</th>
-            <th>Total</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {orders.map((order) => (
-            <tr key={order.id}>
-              <td>{order.id}</td>
-
-              <td>
-                {order.first_name} {order.last_name}
-              </td>
-
-              <td>{order.email}</td>
-
-              <td>{order.payment_method}</td>
-
-              <td>${order.final_total}</td>
-
-              <td>
-                <span className="status">Completed</span>
-              </td>
+      <div className="scrollable-table" role="region" aria-label="Orders" tabIndex={0}>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Payment</th>
+              <th>Total</th>
+              <th>Status</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {orders.map((order) => (
+              <tr key={order.id}>
+                <td>{order.id}</td>
+
+                <td>
+                  {order.first_name} {order.last_name}
+                </td>
+
+                <td>{order.email}</td>
+
+                <td>{order.payment_method}</td>
+
+                <td>${order.final_total}</td>
+
+                <td>
+                  <span className="status">Completed</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

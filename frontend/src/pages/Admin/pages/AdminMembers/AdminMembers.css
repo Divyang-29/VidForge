@@ -13,6 +13,7 @@
 
 .member-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 40px;
 }
@@ -38,7 +39,7 @@
 
 .member-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
   gap: 20px;
 }
 
@@ -69,4 +70,9 @@
   color: white;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.member-form input {
+  min-width: 0;
+  max-width: 100%;
 }

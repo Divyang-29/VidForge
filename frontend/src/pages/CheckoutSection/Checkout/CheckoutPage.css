@@ -257,3 +257,9 @@
   color: #f87171;
   margin: 0;
 }
+
+@media (max-width: 575.98px) {
+  .cp-coupon-row {
+    flex-wrap: wrap;
+  }
+}
